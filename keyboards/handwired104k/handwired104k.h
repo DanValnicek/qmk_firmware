@@ -17,7 +17,7 @@
 #pragma once
 
 #include "quantum.h"
-
+#define XXX KC_NO
 /* This is a shortcut to help you visually see your layout.
  *
  * The first section contains all of the arguments representing the physical
@@ -27,17 +27,29 @@
  * represents the switch matrix.
  */
 #define LAYOUT( \
-     k00,      k02, k03, k04, k05, k06,      k08, k09, k010, k011, k012, k013, k014, k015, k016, k017, k018, k019, k020, k021,\
-     k10, k11, k12, k13, k14, k15, k16, k17, k18, k19, k110, k111, k112,       k114, k115, k116, k117, k118, k119, k120, k121,\
-     k20, k21, k22, k23, k24, k25, k26, k27,      k29, k210, k211, k212, k213, k214, k215, k216, k217, k218, k219, k220, k221,\
-     k30, k31, k32, k33, k34, k35, k36, k37,      k39, k310, k311, k312, k313,                         k318, k319, k320, \
-     k40, k41, k42, k43, k44, k45,      k47,      k49, k410, k411, k412, k413,             k416,       k418, k419, k420, k421,\
-     k50, k51, k52,           k55,                           k511, k512, k513, k514, k515, k516, k517, k518,       k520\
-) { \
-    { k00, KC_NO, k02,  k03,   k04,   k05, k06,   KC_NO, k08,   k09,   k010,  k011, k012, k013,  k014,  k015,  k016,  k017,  k018,  k019, k020, k021 }, \
-    { k10, k11,   k12,  k13,   k14,   k15, k16,   k17,   k18,   k19,   k110,  k111, k112, KC_NO, k114,  k115,  k116,  k117,  k118,  k119, k120, k121 },  \
-    { k20, k21,   k22,  k23,   k24,   k25, k26,   k27,   KC_NO, k29,   k210,  k211, k212, k213,  k214,  k215,  k216,  k217,  k218,  k219, k220, k221 },\
-    { k30, k31,   k32,  k33,   k34,   k35, k36,   k37,   KC_NO, k39,   k310,  k311, k312, k313,  KC_NO, KC_NO, KC_NO, KC_NO, k318,  k319, k320, KC_NO},\
-    { k40, k41,   k42,  k43,   k44,   k45, KC_NO, k47,   KC_NO, k49,   k410,  k411, k412, k413,  KC_NO, KC_NO, k416,  KC_NO, k418,  k419, k420, k421 },\
-    { k50, k51,   k52,  KC_NO, KC_NO, k55, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, k511, k512, k513,  k514,  k515,  k516,  k517,  k518,  KC_NO,k520, KC_NO},\
+     k00,      k02, k03, k04, k05, k06,      k08, k09, k0A, \
+     k10, k11, k12, k13, k14, k15, k16, k17, k18, k19, k1A, \
+     k20, k21, k22, k23, k24, k25, k26, k27,      k29, k2A, \
+     k30, k31, k32, k33, k34, k35, k36, k37,      k39, k3A, \
+     k40, k41, k42, k43, k44, k45,      k47,      k49, k4A, \
+     k50, k51, k52,           k55,                           \
+     k60, k61, k62, k63, k64, k65, k66, k67, k68, k69, k6A,\
+     k70, k71,      k73, k74, k75, k76, k77, k78, k79, k7A,\
+     k80, k81, k82, k83, k84, k85, k86, k87, k88, k89, k8A,\
+     k90, k91, k92,                     k97, k98, k99, \
+     kA0, kA1, kA2,           kA5,      kA7, kA8, kA9, kAA,\
+     kB0, kB1, kB2, kB3, kB4, kB5, kB6, kB7,      kB9\
+) {\
+    { k00, XXX, k02, k03, k04, k05, k06, XXX, k08, k09, k0A, },\
+    { k10, k11, k12, k13, k14, k15, k16, k17, k18, k19, k1A, },\
+    { k20, k21, k22, k23, k24, k25, k26, k27, XXX, k29, k2A, },\
+    { k30, k31, k32, k33, k34, k35, k36, k37, XXX, k39, k3A, },\
+    { k40, k41, k42, k43, k44, k45, XXX, k47, XXX, k49, k4A, },\
+    { k50, k51, k52, XXX, XXX, k55, XXX, XXX, XXX, XXX, XXX, },\
+    { k60, k61, k62, k63, k64, k65, k66, k67, k68, k69, k6A, },\
+    { k70, k71, XXX, k73, k74, k75, k76, k77, k78, k79, k7A, },\
+    { k80, k81, k82, k83, k84, k85, k86, k87, k88, k89, k8A, },\
+    { k90, k91, k92, XXX, XXX, XXX, XXX, k97, k98, k99, XXX, },\
+    { kA0, kA1, kA2, XXX, XXX, kA5, XXX, kA7, kA8, kA9, kAA, },\
+    { kB0, kB1, kB2, kB3, kB4, kB5, kB6, kB7, XXX, kB9, XXX, },\
 }
